@@ -29,7 +29,7 @@
 *   8)promise
 *   9)函数参数默认值 fn(a=1){}
 *   10)对象属性简写 
-``
+```
 const name='Ming', age='18', city='Shanghai';
 const student ={
     name:name,
@@ -37,7 +37,7 @@ const student ={
     city:city
 };
 console.log(student);
-``
+```
 *   11)模块化 import  export default
 **es7:**
 
