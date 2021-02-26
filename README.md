@@ -1,22 +1,22 @@
  js基础:
  ___
-** 1.数据类型有什么? 对象作为函数参数按值传递。 基本/引用
-2.对象深拷贝的方法?
-3.this的用法?  new一个构造函数  构造函数中return一个对象，生成的实例this指向谁？  不return指向谁
-3.call/apply/bind  改变this指向 obj.myFun.apply(db,['成都','上海']);  /obj.myFun.call(db,'成都','上海');　/  obj.myFun.bind(db,'成都','上海')();
-3.new 操作符做了什么  1.创建新对象 2.函数内部this代表新对象 3.执行函数体 4.自动返回新对象
-3.闭包的概念 场景？
-3.怎么理解作用域链？
-4.数组常用的方法有哪些? 哪些会改变原数组？
-4.判断是数据类型方法?  怎么判断一个对象是数组  4 Object.prototype.toString.call(a)
-5.函数防抖与函数节流?   防抖是最后一次触发后空闲一段时间执行（没空闲完永远不执行）节流是间隔一段时间就被触发一次，节流会稀释函数执行频率。
-6.遍历的方法有哪些?  keys()  values()  entries() forEach for...in  for...of for every some map  filter reduce reduceRight find findIndex  
-7.js数字计算精度丢失怎么解决? 0.1+0.2  ?
-10.事件流是什么? 事件委托怎么实现？ 触发事件元素(e.target)和绑定事件元素(e.currentTarget)怎么获取？
-11.什么是模块化？
-12.例举3种强制类型转换和2种隐式类型转换？
-13.实现异步的方式? 回调函数、promise、Generator、async/await、事件监听、发布/订阅
-13.es6语法用过哪些?
+- 1.数据类型有什么? 对象作为函数参数按值传递。 基本/引用 
+- 2.对象深拷贝的方法?
+- 3.this的用法?  new一个构造函数  构造函数中return一个对象，生成的实例this指向谁？  不return指向谁
+- 3.call/apply/bind  改变this指向 obj.myFun.apply(db,['成都','上海']);  /obj.myFun.call(db,'成都','上海');　/  obj.myFun.bind(db,'成都','上海')();
+- 3.new 操作符做了什么  1.创建新对象 2.函数内部this代表新对象 3.执行函数体 4.自动返回新对象
+- 3.闭包的概念 场景？
+- 3.怎么理解作用域链？
+- 4.数组常用的方法有哪些? 哪些会改变原数组？
+- 4.判断是数据类型方法?  怎么判断一个对象是数组  4 Object.prototype.toString.call(a)
+- 5.函数防抖与函数节流?   防抖是最后一次触发后空闲一段时间执行（没空闲完永远不执行）节流是间隔一段时间就被触发一次，节流会稀释函数执行频率。
+- 6.遍历的方法有哪些?  keys()  values()  entries() forEach for...in  for...of for every some map  filter reduce reduceRight find findIndex  
+- 7.js数字计算精度丢失怎么解决? 0.1+0.2  ?
+- 10.事件流是什么? 事件委托怎么实现？ 触发事件元素(e.target)和绑定事件元素(e.currentTarget)怎么获取？
+- 11.什么是模块化？
+- 12.例举3种强制类型转换和2种隐式类型转换？
+- 13.实现异步的方式? 回调函数、promise、Generator、async/await、事件监听、发布/订阅
+- 13.es6语法用过哪些?
 es6:
 1)let const
 2)
