@@ -40,13 +40,13 @@
 >  
 10)对象属性简写 
 ```
-const name='Ming', age='18', city='Shanghai';
-const student ={
-    name:name,
-    age:age,
-    city:city
-};
-console.log(student);
+	const name='Ming', age='18', city='Shanghai';
+	const student ={
+	    name:name,
+	    age:age,
+	    city:city
+	};
+	console.log(student);
 ```
 >  
 11)模块化 import  export default
@@ -65,14 +65,14 @@ console.log(student);
 >
 1)Array.flat()  Array.flatMap()
 ```
-let multi = [1,2,3,[4,5,6,[7,8,9,[10,11,12]]]];
-multi.flat();               // [1,2,3,4,5,6,Array(4)]
-multi.flat().flat();        // [1,2,3,4,5,6,7,8,9,Array(3)]
-multi.flat().flat().flat(); // [1,2,3,4,5,6,7,8,9,10,11,12]
-multi.flat(Infinity);       // [1,2,3,4,5,6,7,8,9,10,11,12]
+	let multi = [1,2,3,[4,5,6,[7,8,9,[10,11,12]]]];
+	multi.flat();               // [1,2,3,4,5,6,Array(4)]
+	multi.flat().flat();        // [1,2,3,4,5,6,7,8,9,Array(3)]
+	multi.flat().flat().flat(); // [1,2,3,4,5,6,7,8,9,10,11,12]
+	multi.flat(Infinity);       // [1,2,3,4,5,6,7,8,9,10,11,12]
 
-array.flatMap(v => [v, v * 2]);
-[1, 2, 2, 4, 3, 6, 4, 8, 5, 10]
+	array.flatMap(v => [v, v * 2]);
+	[1, 2, 2, 4, 3, 6, 4, 8, 5, 10]
 ```
 - 15.介绍下 Set、Map、WeakSet 和 WeakMap 的区别？  防止内存泄漏 弱引用
 - 16.map和forEach区别
@@ -96,20 +96,20 @@ ___
 - 13.父组件怎么获取子组件的生命周期
 - 14.echart常用配置项
 ```
-		图表标题 title
-		图例  legend
-		值域 dataRange
-		提示框 tooltip
-		区域缩放控制器 dataZoom
-		网格 grid
-		类目轴 categoryAxis
-		值型坐标轴默认参数 valueAxis
-		柱形图默认参数 bar
-		折线图默认参数 line
-		散点图默认参数 scatter
-		饼图默认参数 pie
-		默认标志图形类型列表 symbolList
-		可计算特性配置, 孤岛, 提示颜色 calculable
+	图表标题 title
+	图例  legend
+	值域 dataRange
+	提示框 tooltip
+	区域缩放控制器 dataZoom
+	网格 grid
+	类目轴 categoryAxis
+	值型坐标轴默认参数 valueAxis
+	柱形图默认参数 bar
+	折线图默认参数 line
+	散点图默认参数 scatter
+	饼图默认参数 pie
+	默认标志图形类型列表 symbolList
+	可计算特性配置, 孤岛, 提示颜色 calculable
 ```
 
  浏览器:
