@@ -1,6 +1,6 @@
  js基础:
  ___
-1.数据类型有什么? 对象作为函数参数按值传递。 基本/引用
+** 1.数据类型有什么? 对象作为函数参数按值传递。 基本/引用
 2.对象深拷贝的方法?
 3.this的用法?  new一个构造函数  构造函数中return一个对象，生成的实例this指向谁？  不return指向谁
 3.call/apply/bind  改变this指向 obj.myFun.apply(db,['成都','上海']);  /obj.myFun.call(db,'成都','上海');　/  obj.myFun.bind(db,'成都','上海')();
