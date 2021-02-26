@@ -17,6 +17,7 @@
 - 12.例举3种强制类型转换和2种隐式类型转换？
 - 13.实现异步的方式? 回调函数、promise、Generator、async/await、事件监听、发布/订阅
 - 13.es6语法用过哪些?
+- 13.async/await作用?
 
 **es6:**
 >  
@@ -77,11 +78,16 @@
 - 15.介绍下 Set、Map、WeakSet 和 WeakMap 的区别？  防止内存泄漏 弱引用
 - 16.map和forEach区别
 - 17.实现原生拖拽
+ -18.组件化与模块化的区别
 
 
  vue:
 ___
 - 1.VUE响应式原理？双向数据绑定原理？
+- 1.怎么理解vue中的虚拟DOM?
+- 1.怎么操作虚拟DOM?
+- 1.$nextTick原理及使用场景?
+- 1.vue-loader是什么?  是基于webpack的一个loader,负责解析转换.vue文件,提取script/style/templete,在分别交给对应loader处理. 
 - 2.组件之间如何通信？ 父子/隔代/任意
 - 3.vuex的原理?   状态管理工具,能够实现多组件共享数据.
 ```
@@ -99,8 +105,11 @@ ___
 - 7.vue组件中的data为什么是函数？
 - 8.如何阻止Vue中的绑定事件不发生冒泡 。  .stop
 - 9.$set原理
+- 9.v-if 和 v-show 的区别，适合场景
 - 10.了解Vue3.0嘛
 - 11.$ref与props区别  怎么调用子组件得属性和方法
+- 11.vue按键修饰符 .tab .enter  .esc .space  .delete(捕获"删除"和"空格"键) .up  .down .left .right
+- 11.v-model 的修饰符有哪些，分别作用是什么  .trim  .lazy  .number 
 - 12.vue2.0与vue3.0得区别
 - 13.子组件生命周期
 ```
@@ -143,11 +152,12 @@ ___
 
  http:
  ___
-1.说一下200和304的理解和区别
+- 1.说一下200和304的理解和区别
 
 工程化:
-1.git常用命令? 删除远程分支   git  push origin --delete branch
-2.git版本管理规范?  功能  开发   预发布 生产  hotfix  
+- 1.git常用命令? 删除远程分支   git  push origin --delete branch
+- 2.git版本管理规范?  功能  开发   预发布 生产  hotfix  
+
 
 
  css:
