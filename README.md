@@ -92,8 +92,11 @@ ___
 ```
 - 4.ui框架??
 - 5.React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？
-- 6.什么是动态组件？他的作用是什么？include exclude max
-- 7.为什么组件中的data属性的值必须是一个函数？
+- 6.什么是动态组件？他的作用是什么？原理是什么? include exclude max
+- 6.路由传参  params  query 
+- 6.导航钩子
+- 6.$router(是vueRouter的实例) $route($route为当前路由跳转对象) 区别
+- 7.vue组件中的data为什么是函数？
 - 8.如何阻止Vue中的绑定事件不发生冒泡 。  .stop
 - 9.$set原理
 - 10.了解Vue3.0嘛
