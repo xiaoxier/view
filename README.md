@@ -83,7 +83,13 @@
 ___
 - 1.VUE响应式原理？双向数据绑定原理？
 - 2.组件之间如何通信？ 父子/隔代/任意
-- 3.vuex的原理?
+- 3.vuex的原理?   状态管理工具,能够实现多组件共享数据.
+```
+	1.state     状态管理工具，存储的是数据，所以状态即数据
+	2.mutations 里面放的是处理state数据的方法，都是同步操作
+	3.actions   用于存放异步操作方法，也可以处理同步，由于操作state数据需要mutations里的方法所以需要在其内部提交mutations方法
+	4.getters   是一种计算属性用于数据监听，监听的是state里面的数据，要用return返回监听数据
+```
 - 4.ui框架??
 - 5.React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？
 - 6.什么是动态组件？他的作用是什么？include exclude max
@@ -93,6 +99,12 @@ ___
 - 10.了解Vue3.0嘛
 - 11.$ref与props区别  怎么调用子组件得属性和方法
 - 12.vue2.0与vue3.0得区别
+- 13.子组件生命周期
+```
+	1.初始化阶段：父组件beforeCreate=>父组件Created=>父组件beforeMount=>子组件beforeCreate=>子组件Created=>子组件beforeMount=>子组件mounted=>父组件mounted
+	2.数据更新阶段：父组件beforeUpdate=>子组件beforeUpdate=>子组件updated=>父组件updated
+	3.实例销毁阶段：父组件beforeDistory=>子组件beforeDistory=>子组件distoryed=>父组件distoryed
+```
 - 13.父组件怎么获取子组件的生命周期
 - 14.echart常用配置项
 ```
