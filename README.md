@@ -17,9 +17,28 @@
 - 12.例举3种强制类型转换和2种隐式类型转换？
 - 13.实现异步的方式? 回调函数、promise、Generator、async/await、事件监听、发布/订阅
 - 13.es6语法用过哪些?
-es6:
-1)let const
-2)
+**es6:**
+*   1)let const
+*   2)解构赋值 let {a,b} = {a:1,b:2}
+*   3)箭头函数
+*   4)字符串模板 
+*   5)扩展运算符 ...
+*   6)数组方法 map/filter
+*   7)class关键字 类
+*   8)promise
+*   9)函数参数默认值 fn(a=1){}
+*   10)对象属性简写 
+``
+const name='Ming', age='18', city='Shanghai';
+const student ={
+    name:name,
+    age:age,
+    city:city
+};
+console.log(student);
+``
+*   11)模块化 import  export default
+**es7:**
 
 
 15.介绍下 Set、Map、WeakSet 和 WeakMap 的区别？  防止内存泄漏 弱引用
