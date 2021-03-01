@@ -66,9 +66,11 @@
 **es8:**
 >
 1)async/await
+
 **es9:**
 >
 1)promise.finally()
+
 **es10:**
 >
 1)Array.flat()  Array.flatMap()
