@@ -125,7 +125,7 @@ ___
 	2.数据更新阶段：父组件beforeUpdate=>子组件beforeUpdate=>子组件updated=>父组件updated
 	3.实例销毁阶段：父组件beforeDistory=>子组件beforeDistory=>子组件distoryed=>父组件distoryed
 ```
-- 13.vue生命周期每个阶段做了什么
+- 13.怎么理解vue生命周期
 - 13.父组件怎么获取子组件的生命周期
 - 14.echart常用配置项
 ```
