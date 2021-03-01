@@ -14,8 +14,8 @@
 - 5.函数防抖与函数节流?   防抖是最后一次触发后空闲一段时间执行（没空闲完永远不执行）节流是间隔一段时间就被触发一次，节流会稀释函数执行频率。
 - 6.遍历的方法有哪些?  keys()  values()  entries() forEach for...in  for...of for every some map  filter reduce reduceRight find findIndex  
 - 7.js数字计算精度丢失怎么解决? 0.1+0.2  ?
+- 8.组件化与模块化的区别
 - 10.事件流是什么? 事件委托怎么实现？ 触发事件元素(e.target)和绑定事件元素(e.currentTarget)怎么获取？
-- 11.什么是模块化？
 - 12.例举3种强制类型转换和2种隐式类型转换？
 - 13.实现异步的方式? 回调函数、promise、Generator、async/await、事件监听、发布/订阅
 - 13.promise 自身api  原型上方法 作用 
@@ -87,7 +87,6 @@
 - 15.介绍下 Set、Map、WeakSet 和 WeakMap 的区别？  防止内存泄漏 弱引用
 - 16.map和forEach区别
 - 17.实现原生拖拽
- -18.组件化与模块化的区别
 
 
  vue:
