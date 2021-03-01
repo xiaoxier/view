@@ -9,6 +9,8 @@
 - 3.怎么理解作用域链？
 - 4.数组常用的方法有哪些? 哪些会改变原数组？
 - 4.判断是数据类型方法?  怎么判断一个对象是数组  4 Object.prototype.toString.call(a)
+- 4.伪数组特性 常见伪数组
+- 4.伪数组转数组  
 - 5.函数防抖与函数节流?   防抖是最后一次触发后空闲一段时间执行（没空闲完永远不执行）节流是间隔一段时间就被触发一次，节流会稀释函数执行频率。
 - 6.遍历的方法有哪些?  keys()  values()  entries() forEach for...in  for...of for every some map  filter reduce reduceRight find findIndex  
 - 7.js数字计算精度丢失怎么解决? 0.1+0.2  ?
@@ -16,8 +18,13 @@
 - 11.什么是模块化？
 - 12.例举3种强制类型转换和2种隐式类型转换？
 - 13.实现异步的方式? 回调函数、promise、Generator、async/await、事件监听、发布/订阅
+- 13.promise 自身api  原型上方法 作用 
 - 13.es6语法用过哪些?
 - 13.async/await作用?
+- 14.库和框架区别
+- 15.MVC MVVM区别
+- 15.面向对象？
+- 16.ajax封装？
 
 **es6:**
 >  
@@ -87,6 +94,7 @@ ___
 - 1.怎么理解vue中的虚拟DOM?
 - 1.怎么操作虚拟DOM?
 - 1.$nextTick原理及使用场景?
+- 1.如果在vue实例创建之后添加新的属性到实例上，不会触发视图更新？
 - 1.vue-loader是什么?  是基于webpack的一个loader,负责解析转换.vue文件,提取script/style/templete,在分别交给对应loader处理. 
 - 2.组件之间如何通信？ 父子/隔代/任意
 - 3.vuex的原理?   状态管理工具,能够实现多组件共享数据.
@@ -100,8 +108,8 @@ ___
 - 5.React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？
 - 6.什么是动态组件？他的作用是什么？原理是什么? include exclude max
 - 6.路由传参  params  query 
-- 6.导航钩子
 - 6.$router(是vueRouter的实例) $route($route为当前路由跳转对象) 区别
+- 6.导航钩子有几种（导航守卫）具体怎么用的
 - 7.vue组件中的data为什么是函数？
 - 8.如何阻止Vue中的绑定事件不发生冒泡 。  .stop
 - 9.$set原理
@@ -117,6 +125,7 @@ ___
 	2.数据更新阶段：父组件beforeUpdate=>子组件beforeUpdate=>子组件updated=>父组件updated
 	3.实例销毁阶段：父组件beforeDistory=>子组件beforeDistory=>子组件distoryed=>父组件distoryed
 ```
+- 13.vue生命周期每个阶段做了什么
 - 13.父组件怎么获取子组件的生命周期
 - 14.echart常用配置项
 ```
@@ -148,6 +157,7 @@ ___
 - 7.本地缓存与浏览器缓存机制
 - 7.token作用:token是服务端生成的'令牌',来识别不同的身份  1.防止表单重复提交 2.判断用户是否登录
 - 8.websoket
+
 
 
  http:
