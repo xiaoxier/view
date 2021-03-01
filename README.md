@@ -174,16 +174,17 @@ ___
 
  css:
 ___
-设置小于12px字体  {font-size:12px; -webkit-transform:scale(0.8);}
-flex布局属性  flex-direction/ flex-wrap/ justify-content /align-items/align-content:/flex-flow
-css选择器优先级
-h5怎么做适配? em rem px 区
-1px问题怎么解决?原因是什么?
-浮动的特性?清浮动的方法?
-300ms延迟 
-BFC
-垂直水平居中
-css三角形  
+- 设置小于12px字体  {font-size:12px; -webkit-transform:scale(0.8);}
+- flex布局属性  flex-direction/ flex-wrap/ justify-content /align-items/align-content:/flex-flow
+- css选择器优先级
+- h5怎么做适配? em rem px 区
+- 1px问题怎么解决?原因是什么?
+- 浮动的特性?清浮动的方法?
+- 300ms延迟 
+- BFC
+- 垂直水平居中
+- css三角形  
+```
 div {
       width: 0;
       height: 0;
@@ -191,6 +192,7 @@ div {
       border-width: 40px 20px 0 0;
       border-right-color: #f99;
     }
+```
 
 
 
@@ -198,14 +200,14 @@ div {
 
  软实力题:
 ___
-1.工作中  产品需求不合理?  怎么办
-1.项目过程中，有遇到什么问题吗？怎么解决的
-1.你最大的优点是什么？那你最大的缺点呢？
-1.身边的朋友通常对你的评价是什么
-1.喜欢什么样的工作氛围
-1.怎么理解前端技术的大趋势？自己在做哪方面的知识储备？
-2.对以后自己的前端职业路线，怎么规划
-2.到岗时间?期望薪资?
+- 工作中  产品需求不合理?  怎么办
+- 项目过程中，有遇到什么问题吗？怎么解决的
+- 你最大的优点是什么？那你最大的缺点呢？
+- 身边的朋友通常对你的评价是什么
+- 喜欢什么样的工作氛围
+- 怎么理解前端技术的大趋势？自己在做哪方面的知识储备？
+- 对以后自己的前端职业路线，怎么规划
+- 到岗时间?期望薪资?
 
 
 
