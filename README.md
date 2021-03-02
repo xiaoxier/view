@@ -135,6 +135,8 @@ setTimeout(() => {
  堆内存：存储引用类型
 
 - 6.const原理
+ 
+ >
  const声明基本数据类型不允许改变，引用类型不能改变引用地址/指针 
  ```
  示例：
@@ -149,7 +151,7 @@ setTimeout(() => {
     console.log(people) //{ name: 'Jack', age: 22 }
  ```
  - 7.websocket 和http里面的 keep-alive区别
- 
+
   >
   http里得长连接本质还是属于客户端发送请求，服务端发送响应，是单向通信；
   >
