@@ -91,7 +91,7 @@ Promise.all = arr => {
 	 console.log(Iterator.next());//{value:"2",done:false}
 	 console.log(Iterator.next());//{value:undefined,done:true}
   ```
-- 4. js进出任务队列示例及执行过程解释
+- 4.js进出任务队列示例及执行过程解释
 
 ```
 const async1 = async () => {
@@ -123,13 +123,13 @@ setTimeout(() => {
 1
 'timer2'
 'timer1'
-//async函数中await的new Promise要是没有返回值的话则不执行后面的内容(类似题5.5)
-//.then函数中的参数期待的是函数，如果不是函数的话会发生穿透(类似题3.8 )
+//async函数中await的new Promise要是没有返回值的话则不执行后面的内容
+//.then函数中的参数期待的是函数，如果不是函数的话会发生穿透
 //注意定时器的延迟时间
 ```
 - 5.内存指向
-*   栈内存：存储基本数据类型及对象变量得指针
-*   堆内存：存储引用类型
+ 栈内存：存储基本数据类型及对象变量得指针
+ 堆内存：存储引用类型
 
 - 6.const原理
  const声明基本数据类型不允许改变，引用类型不能改变引用地址/指针 
@@ -146,5 +146,5 @@ setTimeout(() => {
     console.log(people) //{ name: 'Jack', age: 22 }
  ```
  - 7.websocket 和http里面的 keep-alive区别
-*   http里得长连接本质还是属于客户端发送请求，服务端发送响应，是单向通信；
-*   websocket长连接是双向通信协议，建立连接后，WebSocket服务器端和客户端都能主动向对方发送或接收数据
+  http里得长连接本质还是属于客户端发送请求，服务端发送响应，是单向通信；
+  websocket长连接是双向通信协议，建立连接后，WebSocket服务器端和客户端都能主动向对方发送或接收数据
