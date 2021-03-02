@@ -173,6 +173,7 @@ ___
 
  css:
 ___
+- 伪元素/伪类？
 - 设置小于12px字体  {font-size:12px; -webkit-transform:scale(0.8);}
 - flex布局属性  flex-direction/ flex-wrap/ justify-content /align-items/align-content:/flex-flow
 - css选择器优先级
