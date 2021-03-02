@@ -128,7 +128,10 @@ setTimeout(() => {
 //注意定时器的延迟时间
 ```
 - 5.内存指向
+
+>
  栈内存：存储基本数据类型及对象变量得指针
+> 
  堆内存：存储引用类型
 
 - 6.const原理
@@ -146,5 +149,8 @@ setTimeout(() => {
     console.log(people) //{ name: 'Jack', age: 22 }
  ```
  - 7.websocket 和http里面的 keep-alive区别
+ 
+  >
   http里得长连接本质还是属于客户端发送请求，服务端发送响应，是单向通信；
+  >
   websocket长连接是双向通信协议，建立连接后，WebSocket服务器端和客户端都能主动向对方发送或接收数据
