@@ -87,6 +87,7 @@
 - 15.介绍下 Set、Map、WeakSet 和 WeakMap 的区别？  防止内存泄漏 弱引用
 - 16.map和forEach区别
 - 17.实现原生拖拽
+- 18.dom事件触发方式 
 
 
  vue:
@@ -164,6 +165,7 @@ ___
  http:
  ___
 - 1.说一下200和304的理解和区别
+- 2.有没有了解http2.0,websocket,https，说一下你的理解以及你所了解的特性
 
 工程化:
 - 1.git常用命令? 删除远程分支   git  push origin --delete branch
@@ -173,16 +175,17 @@ ___
 
  css:
 ___
-- 伪元素/伪类？
+- 伪类/伪元素？  ：link :hover :active :visited :focus / ::before ::after  ::selection 
 - 设置小于12px字体  {font-size:12px; -webkit-transform:scale(0.8);}
-- flex布局属性  flex-direction/ flex-wrap/ justify-content /align-items/align-content:/flex-flow
+- flex布局属性  flex-direction/ flex-wrap/ justify-content /align-items/align-content/flex-flow
 - css选择器优先级
 - h5怎么做适配? em rem px 区
 - 1px问题怎么解决?原因是什么?
 - 浮动的特性?清浮动的方法?
 - 300ms延迟 
 - BFC
-- 垂直水平居中
+- box-sizing的应用场景
+- 未知元素垂直水平居中  table grid position flex 
 - css三角形  
 ```
 div {
@@ -199,7 +202,6 @@ div {
  软实力题:
 ___
 - 工作中  产品需求不合理?  怎么办
-- 项目过程中，有遇到什么问题吗？怎么解决的
 - 你最大的优点是什么？那你最大的缺点呢？
 - 身边的朋友通常对你的评价是什么
 - 喜欢什么样的工作氛围
@@ -214,6 +216,7 @@ ___
 - 如果再做这个项目，你会在哪些方面进行改善？
 - 常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？
 - 你有用过哪些前端性能优化的方法？
+- 说一下你项目中用到的技术栈，以及觉得得意和出色的点，以及让你头疼的点，怎么解决的
 
 
 https://mp.weixin.qq.com/s/xVVP_Uk8rLBhHJaMqMMJoA
