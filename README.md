@@ -2,7 +2,8 @@
  ___
 - 1.数据类型有什么? 对象作为函数参数按值传递。 基本/引用 
 - 2.对象深拷贝的方法?
-- 3.this的用法?  new一个构造函数  构造函数中return一个对象，生成的实例this指向谁？  不return指向谁
+- 3.this的用法?  
+- 3.new 一个构造函数，如果函数返回 return {} 、 return null ， return 1 ， return true 会发生什么情况？
 - 3.call/apply/bind  改变this指向 obj.myFun.apply(db,['成都','上海']);  /obj.myFun.call(db,'成都','上海');　/  obj.myFun.bind(db,'成都','上海')();
 - 3.new 操作符做了什么  1.创建新对象 2.函数内部this代表新对象 3.执行函数体 4.自动返回新对象
 - 3.闭包的概念 场景？
@@ -25,6 +26,7 @@
 - 15.MVC MVVM区别
 - 15.面向对象？
 - 16.ajax封装？
+- 17.
 
 **es6:**
 >  
@@ -159,7 +161,7 @@ ___
 - 7.本地缓存与浏览器缓存机制
 - 7.token作用:token是服务端生成的'令牌',来识别不同的身份  1.防止表单重复提交 2.判断用户是否登录
 - 8.websoket
-- 9.css放在头部，js放在body尾?why
+- 9.css放在头部，js放在body尾?why css重复渲染   js操作dom报错
 
 
 
