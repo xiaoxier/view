@@ -1,2 +1,116 @@
-[InternetShortcut]
-URL=https://mp5x51vklk.feishu.cn/docs/doccnBrfPgl4QGaGIXBrhkWxwng
+vue2源码
+  // 定义Vue原型上的init方法(内部方法)
+  initMixin(Vue);
+  // 定义原型上跟数据相关的属性方法
+  stateMixin(Vue);
+  //定义原型上跟事件相关的属性方法
+  eventsMixin(Vue);
+  // 定义原型上跟生命周期相关的方法
+  lifecycleMixin(Vue);
+  // 定义渲染相关的函数
+  renderMixin(Vue);
+
+
+数据代理的另一个说法是数据劫持，当我们在访问或者修改对象的某个属性时，数据劫持可以拦截这个行为并进行额外的操作或者修改返回的结果。而我们知道Vue响应式系统的核心就是数据代理，代理使得数据在访问时进行依赖收集，在修改更新时对依赖进行更新，这是响应式系统的核心思路。而这一切离不开Vue对数据做了拦截代理。
+
+Object.defineProperty的getter和setter方法并不适合监听拦截数组的变化,为了解决像数组这类无法进行数据拦截，以及深层次的嵌套问题，es6引入了Proxy，完美的解决了数组的监听检测问题，针对数组添加数据，删除数据的不同方法，代理都能很好的拦截处理。另外Proxy也很好的解决了深层次嵌套对象的问题
+
+数据代理是一种设计模式，也是一种编程思想，Object.defineProperty和Proxy都可以实现数据代理，但是他们各有优劣，前者兼容性较好，但是却无法对数组或者嵌套的对象进行代理监测，而Proxy基本可以解决所有的问题，但是对兼容性要求很高。Vue中的响应式系统是以Object.defineProperty实现的
+
+
+
+ 确定挂载的 DOM 元素,这个 DOM 需要保证不能为 html，body 这类根节点。 我们知道渲染有两种方式，一种是通过 template 模板字符串，另一种是手写 render 函数，前 面提到 template 模板需要运行时进行编译，而后一个可以直接用 render 选项作为渲染函数。 因此挂载阶段会有两条分支， template 模板会先经过模板的解析，最终编译成 render 渲染函 数参与实例挂载，而手写 render 函数不需要编译阶段，直接调用挂载的 $mount 方法。 针对 template 而言，它会利用 Vue 内部的编译器进行模板的编译，字符串模板会转换为抽象 的语法树，即 AST 树，并最终转化为一个类似 function(){with(){}} 的渲染函数，这是我们 后面讨论的重点。 无论是 template 模板还是手写 render 函数，最终都将进入 mountComponent 过程,这个阶段 会实例化一个渲染 watcher ,具体 watcher 的内容，另外放章节讨论。我们先知道一个结论， 渲染 watcher 的回调函数有两个执行时机，一个是在初始化时执行，另一个是当 vm 实例检测 到数据发生变化时会再次执行回调函数。 回调函数是执行 updateComponent 的过程，这个方法有两个阶段，一个是 vm._render ,另一 个是 vm._update 。 vm._render 会执行前面生成的 render 渲染函数，并生成一 个 Virtual Dom tree ,而 vm._update 会将这个 Virtual Dom tree 转化为真实的 DOM 节 点。 
+
+
+ 在构建简易式响应式系统的时候，我们引出了几个重要的概念，他们都是响应式原理设计的核心，我们 先简单回顾一下： Observer 类，实例化一个 Observer 类会通过 Object.defineProperty 对数据 的 getter,setter 方法进行改写，在 getter 阶段进行依赖的收集,在数据发生更新阶段，触 发 setter 方法进行依赖的更新 watcher 类，实例化 watcher 类相当于创建一个依赖，简单的理解是数据在哪里被使用就需要 产生了一个依赖。当数据发生改变时，会通知到每个依赖进行更新，前面提到的渲染 wathcer 便 是渲染 dom 时使用数据产生的依赖。 Dep 类，既然 watcher 理解为每个数据需要监听的依赖，那么对这些依赖的收集和通知则需要 另一个类来管理，这个类便是 Dep , Dep 需要做的只有两件事，收集依赖和派发更新依赖 
+
+nextTick 本质是利用事件循环的微任务队列实现异步更新
+
+响应式系统的核心是利用Object.defineProperty对数据的getter,setter进行拦截处理，处理的核心是在访问数据时对数据所在场景的依赖进行收集，在数据发生更改时，通知收集过的依赖进行更新。
+
+
+hack数组方法
+// 数组拥有的方法
+var methodsToPatch = [
+  'push',
+  'pop',
+  'shift',
+  'unshift',
+  'splice',
+  'sort',
+  'reverse'
+];
+无法响应式：
+下标方式修改数组
+修改数组长度
+
+
+1. macro-task常见的有 setTimeout, setInterval, setImmediate, script脚本, I/O操作，UI渲染
+2. micro-task常见的有 promise, process.nextTick, MutationObserver等
+
+通过 Virtual DOM 和 Diff 算法隔离 DOM 操作
+之前讲到Vue在渲染机制的优化上，引入了Virtual DOM的概念，利用Virtual DOM描述一个真实的DOM,本质上是在JS和真实DOM之间架起了一层缓冲层。当我们通过大量的JS运算,并将最终结果反应到浏览器进行渲染时，Virtual DOM可以将多个改动合并成一个批量的操作，从而减少 dom 重排的次数，进而缩短了生成渲染树和绘制节点所花的时间，达到渲染优化的目的。
+
+只进行同层节点的比较，节点不一致，直接用新节点及其子节点替换旧节点。
+
+patchVnode是新旧Vnode对比的核心方法，对比的逻辑如下。
+1. 节点相同，且节点除了拥有文本节点外没有其他子节点。这种情况下直接替换文本内容。
+2. 新节点没有子节点，旧节点有子节点，则删除旧节点所有子节点。
+3. 旧节点没有子节点，新节点有子节点，则用新的所有子节点去更新旧节点。
+4. 新旧都存在子节点。则对比子节点内容做操作。
+
+$on方法用来监听事件,执行回调
+$off方法用来解除事件监听
+$once方法用来监听一次事件,执行回调
+$emit方法用来触发事件,执行回调
+
+父子组件通信，组件自定义事件的触发和监听本质上都是在当前的组件实例中进行，之所以能产生父子组件通信的效果是因为事件监听的回调函数写在了父组件中
+
+事件是我们日常开发中必不可少的功能点，Vue在应用层暴露了@,v-on的指令供开发者在模板中绑定事件。事件指令在模板编译阶段会以属性的形式存在，而在真实节点渲染阶段会根据事件属性去绑定相关的事件。对于组件的事件而言，我们可以利用事件进行子父组件间的通信，他本质上是在同个子组件内部维护了一个事件总线，从分析结果可以看出，之所以有子父组件通信的效果，原因仅仅是因为回调函数写在了父组件中。
+
+v-model核心是通过事件触发改变表单的值,本质上是一个子父组件通信的语法糖。
+
+
+Vuex是一个专为Vue服务，用于管理页面的数据状态，提供统一数据操作的生态系统。它集中于MVC模式中的Model层，规定所有的数据操作必须通过action-mutation-state，change的流程来进行，再结合Vue的数据视图双向绑定特性来实现页面的展示更新。
+Vue Components-Dispatch-Actions-commit-Mutations-Mutate-State-Render
+Vue Components，Vue组件，HTML页面上，负责接收用户操作等交互行动，执行dispath方法触发对应action进行回应。
+dispath，操作行为触发方法，是唯一能执行action的方法。
+actions，操作行为处理方法，负责处理Vue Components接收到的所有交互行为，包含同步/异步操作，支持多个同名方法，按照注册的顺序依次触发。向后台API请求的操作就在这个模块中进行，包括触发其他action以及提交mutation操作。该模块提供了Promise的封装，以支持action的链式触发。
+commit，状态改变提交操作的方法。对mutation进行提交，是唯一能执行mutation的方法。
+mutations:状态改变操作方法，是Vuex修改state的唯一方法，其他修改方式在严格模式下将会报错，该方法只能进行同步操作，且方法名只能全局唯一。操作之中会有一些hook暴露出来，以进行state的监控等。
+state:页面状态管理容器对象。集中存储Vue Components中data对象的零散数据，全局唯一，以进行统一的状态管理。页面显示所需的数据从该对象中进行读取，利用Vue的细粒度数据响应机制来进行高效的状态更新。
+getters:state对象读取方法。被包含中render中，Vue Components通过该方法读取全局state对象。
+
+多根节点不会报错
+setup是在beforeCreate之前执行的,只在初始化时执行一次,所有Composition API 函数都在此使用,
+组件对象没创建,this不可用
+解构相当于重新声明变量,响应式会消失,通过toRefs返回的对象,解构出来的属性也是响应式的
+mitt.js 跨组件通信
+
+Vue实现数据双向绑定的：
+vue.js是采用数据劫持结合发布者-订阅者模式的方式，通过 object.defineproperty劫持各个属性的setter和getter，在数据 变动时发布消息给订阅者，触发相应的的监听回调。
+
+实现了一个监听器Observer，对数据对象进行遍历，包括了属性对象，利用Object.defineProperty()属性都加上setter和getter。这样的话，给这个对象的某个值赋值，就会触发setter，那么就监听到了数据变化。
+
+实现了一个解析器Compile，解析Vue模板指令，将模板中的遍历都替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，调用更新函数进行数据更新。
+
+实现一个订阅者Watcher:Watch订阅者是Observer和Compile之间通信的桥梁，主要的任务是订阅Observer中的属性值变化的消息，当收到属性值变化的消息时，触发解析器Compile中的对应的更新函数。
+
+实现一个订阅器Dep，订阅器采用发布-订阅设计模式，用来收集订阅者Watcher，对监听器Observer和订阅者watcher进行统一管理。
+
+首屏加载空白的解决方案？
+单页面应用的 html 是靠 js 生成，因为首屏需要加载很大的js文件(app.js vendor.js)，所以当网速差的时候会产生一定程度的白屏。
+解决办法：
+1. 优化 webpack 减少模块打包体积，code-split 按需加载
+2. 服务端渲染，在服务端事先拼装好首页所需的 html
+3. 首页加 loading 或 骨架屏 （仅仅是优化体验）
+4. 服务端开启gzip压缩
+5. 打包文件分包，提取公共文件包
+
+视频学习
+尚硅谷2021最新Vue.JS教程快速入门到项目实战（Vue3/VueJS技术详解）_哔哩哔哩_bilibili
+https://www.bilibili.com/video/BV1Wh411X7Xp
+
+vue单向数据流
+父级prop 的更新会向下流动到子组件中，每次父组件发生更新，子组件所有的prop 都会刷新为最新的值;
+数据从父组件传递给子组件，只能单向绑定，子组件内部不能直接修改父组件传递过来的数据，（可以使用data 和computed 解决）
